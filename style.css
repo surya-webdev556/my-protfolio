@@ -1,0 +1,317 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: #ddd;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  max-width: 500px;
+  color: #bbb;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+#about {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  position: relative;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #ff4500;
+  position: relative;
+}
+
+#about h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff4500;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+#about p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #ddd;
+  margin: 0 auto;
+}
+
+.btn-group {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #ff4500;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #e63e00;
+}
+
+.btn.secondary {
+  border: 2px solid #555;
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  border-color: #ff4500;
+  color: #ff4500;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+.highlight {
+  color: #ff4500; /* your orange accent */
+}
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+.name {
+  color: #ff4500;   /* orange highlight */
+  font-weight: bold;
+  font-size: 3rem;  /* make it bigger if you want */
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+nav .logo {
+  color: #ff4500;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav ul li a {
+  color: #ddd;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #ff4500;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;     /* vertically align items */
+  justify-content: center; /* center the whole hero block */
+  gap: 50px;               /* spacing between text and image */
+  padding: 100px 20px;
+}
+
+.hero-content {
+  max-width: 500px;
+  text-align: left;        /* ✅ keep text left-aligned */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero-content .buttons {
+  display: flex;
+  gap: 15px;              /* spacing between buttons */
+}
+
+.hero img {
+  max-width: 550px;   /* control avatar size */
+  height: auto;
+  border-radius: 0;
+  mix-blend-mode: lighten;   /* or 'screen' */
+}
+
+/* STACK Skills & Projects vertically (one-by-one) */
+#skills .cards,
+#projects .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;               /* space between items */
+  align-items: center;     /* center narrower cards */
+}
+
+/* Make each card take the full available width up to a max */
+#skills .cards .card,
+#projects .cards .card {
+  width: 100%;
+  max-width: 800px;        /* control card width */
+  flex: none;
+  margin: 0;
+
+  /* Center content inside */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  text-align: center;      /* center the text */
+  gap: 10px;               /* space between heading, desc, link */
+}
+
+/* Optional: project card hover effect */
+#projects .cards .card:hover {
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ff4500;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+}
+
+/* Timeline (Education) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+.timeline-item {
+  padding: 1rem;
+  border-left: 4px solid #ff4500;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
+
+/* Contact */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form input, form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+form button {
+  padding: 0.8rem;
+  background: #ff4500;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form button:hover {
+  background: #e63900;
+}
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  background: #111;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;   /* Stack name and links vertically */
+  align-items: center;      /* Center everything horizontally */
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  margin-top: 0.4rem;
+}
+
+.footer-links a {
+  color: #ff4500;    /* highlight color */
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
